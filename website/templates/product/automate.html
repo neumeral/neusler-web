@@ -1,0 +1,271 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block content %}
+
+
+<section class="wrapper bg-light mt--1">
+  <div>
+    <div class="card bg-soft-primary mt--1 mb-12 mb-md-18">
+      <div class="card-body p-md-10 py-xl-11 px-xl-15">
+        <div class="row gx-lg-8 gx-xl-0 gy-10 align-items-center justify-content-center">
+          
+          <!--/column -->
+          <div
+            class="col-lg-8 col-12 col-xl-8 text-center "
+            data-cues="slideInDown"
+            data-group="page-title"
+            data-delay="600"
+          >
+            <h1 class="display-2 mb-5">
+              Use automations, and save your time.
+            </h1>
+            <p class="lead fs-lg lh-sm mb-7 pe-xl-10">
+              Automations and integrations to keep your team productive - save hours and focus on creating good content.
+            </p>
+            
+            
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/.card-body -->
+    </div>
+    <!--/.card -->
+  </div>
+</section>
+
+
+<section class="wrapper bg-light wrapper-border">
+  <div class="container py-14 py-md-16">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-18 align-items-center">
+      <div class="col-lg-6 position-relative">
+        <div class="shape bg-line leaf rounded-circle rellax w-17 h-17" data-rellax-speed="1" style="top: -2rem; right: -0.6rem; transform: translate3d(0px, -40px, 0px);"></div>
+        <div class="shape bg-pale-violet rounded-circle rellax w-17 h-17" data-rellax-speed="1" style="bottom: -2rem; left: -0.4rem; transform: translate3d(0px, 2px, 0px);"></div>
+        <figure class="rounded bg-soft-blue border border-secondary border-2 shadow-sm">
+          <img
+            src="{% static 'images/pages/social.jpg' %}"
+            srcset="{% static 'images/pages/social.jpg' %} 2x"
+            alt="social sharing in Neusler"
+          />
+        </figure>
+      </div>
+      <!--/column -->
+      <div class="col-lg-6">
+        <h3 class="display-4 mb-4">Integrate with connected Social Channels</h3>
+        <p class="mb-5">Automatically set rules to post to social channel when a post gets published. Advanced rules to set when a post should be triggered in connected social media (coming soon). </p>
+        <div class="row gy-3">
+          <div class="col-xl-6">
+            <ul class="icon-list bullet-bg bullet-soft-leaf mb-0">
+              <li><span><i class="uil uil-check"></i></span><span>Connect to twitter and Facebook</span></li>
+              
+            </ul>
+          </div>
+          <!--/column -->
+          <div class="col-xl-6">
+            <ul class="icon-list bullet-bg bullet-soft-leaf mb-0">
+              <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Auto trigger cross posting to social media</span></li>
+            </ul>
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+    <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+      <div class="col-lg-6 order-lg-2 position-relative">
+        <div class="shape bg-line aqua rounded-circle rellax w-17 h-17" data-rellax-speed="1" style="top: -2rem; left: -0.6rem; transform: translate3d(0px, 27px, 0px);"></div>
+        <div class="shape bg-pale-red rounded-circle rellax w-17 h-17" data-rellax-speed="1" style="bottom: -2rem; right: -0.4rem; transform: translate3d(0px, 70px, 0px);"></div>
+        <figure class="rounded bg-soft-blue border border-secondary border-2 shadow-sm">
+          <img
+            src="{% static 'images/pages/integrations.jpg' %}"
+            srcset="{% static 'images/pages/integrations.jpg' %} 2x"
+            alt="integrations in Neusler"
+          />
+        </figure>
+      </div>
+      <!--/column -->
+      <div class="col-lg-6">
+        <h3 class="display-4 mb-4">Integrate with the systems you use</h3>
+        <p class="mb-2">Neusler has a set of integrations that helps you build your content strategy by connecting to the other tools you use. For example connect newsletters to email marketing platforms like Klaviyo or Mailchimp and all your subscriber data can be instantly used.  </p>
+        <p class="mb-5">Powerful push notifications, and analytics integrations.</p>
+        <div class="row gy-3">
+          <div class="col-xl-6">
+            <ul class="icon-list bullet-bg bullet-soft-aqua mb-0">
+              <li><span><i class="uil uil-check"></i></span><span>Marketing Integrations like Mailchimp, Klaviyo</span></li>
+              <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Push notifications</span></li>
+            </ul>
+          </div>
+          <!--/column -->
+          <div class="col-xl-6">
+            <ul class="icon-list bullet-bg bullet-soft-aqua mb-0">
+              <li><span><i class="uil uil-check"></i></span><span>RSS Feeds</span></li>
+              <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Google Analytics and tag manager.</span></li>
+            </ul>
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+
+
+
+
+
+<section class="wrapper bg-light wrapper-border">
+  <div class="container py-14 py-md-16">
+    <div class="row gx-lg-0 gy-10 align-items-center">
+      <div class="col-lg-6">
+        <div class="row g-6 text-center">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-lg-12">
+                <figure class="rounded mb-6 bg-pale-primary">
+                  <img
+                    src="{% static 'images/pages/workflow.svg' %}"
+                    srcset="{% static 'images/pages/workflow.svg' %} 2x"
+                    alt=""
+                  />
+                </figure>
+              </div>
+              <!-- /column -->
+              <div class="col-lg-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="icon btn btn-circle btn-lg btn-soft-primary disabled mb-3"> <i class="las la-network-wired"></i> </div>
+                    <h4>Effective Publishing</h4>
+                    <p class="mb-2"> Intuitive editing experience to manage multiple content types.</p>
+                    <a href="/product/publishing" class="more hover link-primary">Learn More</a>
+                  </div>
+                  <!--/.card-body -->
+                </div>
+                <!--/.card -->
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-lg-12 order-md-2">
+                <figure class="rounded mb-6 mb-md-0 bg-pale-primary">
+                  <img
+                    src="{% static 'images/pages/workflow-2.svg' %}"
+                    srcset="{% static 'images/pages/workflow-2.svg' %} 2x"
+                    alt=""
+                  />
+                </figure>
+
+              </div>
+              <!-- /column -->
+              <div class="col-lg-12">
+                <div class="card mb-md-6 mt-lg-6">
+                  <div class="card-body">
+                    <div class="icon btn btn-circle btn-lg btn-soft-primary disabled mb-3"> <i class="las la-bullhorn"></i> </div>
+                    <h4>Engage</h4>
+                    <p class="mb-2">Improve engagement with interactive elements — polls, comments, likes, google stories etc.</p>
+                    <a href="/product/engage" class="more hover link-primary">Learn More</a>
+                  </div>
+                  <!--/.card-body -->
+                </div>
+                <!--/.card -->
+              </div>
+              <!-- /column -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+      <div class="col-lg-5 offset-lg-1">
+        <h2 class="display-4 mb-3">Effective content management has never been easier!</h2>
+        <p class="lead fs-lg">We offer a fully managed solution that will be specifically designed to meet your business needs.</p>
+        <p>Thinking of Wordpress for your magazine / publishing needs. The hidden costs associated with using multiple plugins, the headaches of security issues and updations is a nightmare. We too have faced it. Neusler was built as a clean and effective alternative to wordpress. </p>
+        <p>Use our fully managed content platform, and get peace of mind.</p>
+        <p><a href="/pricing?utm_source=automate" class="more hover link-primary">View Pricing Plans</a></p>
+
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+
+
+<section class="wrapper bg-light wrapper-border">
+  <div class="container py-14 py-md-16">
+    <div class="row gy-10 gx-lg-8 gx-xl-12 align-items-center">
+      <div class="col-lg-7 position-relative">
+        <div class="shape bg-dot primary rellax w-18 h-18" data-rellax-speed="1" style="top: 0; left: -1.4rem; z-index: 0;"></div>
+        <div class="row gx-md-5 gy-5">
+          <div class="col-md-6">
+            <figure class="rounded bg-soft-green mt-md-10 position-relative">
+              <img
+                src="{% static 'images/pages/engage.svg' %}"
+                srcset="{% static 'images/pages/engage.svg' %} 2x"
+                alt=""
+              />
+            </figure>
+          </div>
+          <!--/column -->
+          <div class="col-md-6">
+            <div class="row gx-md-5 gy-5">
+              <div class="col-md-12 order-md-2">
+                <figure class="rounded bg-soft-blue ">
+                  <img
+                    src="{% static 'images/pages/ai-2.svg' %}"
+                    srcset="{% static 'images/pages/ai-2.svg' %} 2x"
+                    alt="neusler augmented ai"
+                  />
+                </figure>
+              </div>
+              <!--/column -->
+              <div class="col-md-10">
+                <div class="card bg-pale-primary text-center counter-wrapper">
+                  <div class="card-body py-11">
+                    <p class="mb-2">Save</p>
+                    <h3 class="counter text-nowrap">10+ hrs<small>/month</small></h3>
+                    <p class="mb-0">Get started today!</p>
+                  </div>
+                  <!--/.card-body -->
+                </div>
+                <!--/.card -->
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!--/column -->
+      <div class="col-lg-5">
+        <h2 class="display-4 mb-3">Want to see how it works?</h2>
+        <p class="lead fs-lg">Let's make your content great together. Join our trusted clients by using our services and grow your business.</p>
+        <p>Let's setup a demo instance just for you! </p>
+        <p>You can try our open source version or our engineers will walk you through the demo of Neusler and help you figure out if it is a good fit.</p>
+        <a href="https://calendly.com/neusler/30min" target="_blank" class="btn btn-primary  mt-2">Book a demo</a>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</section>
+{% endblock %}

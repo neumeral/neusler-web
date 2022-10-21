@@ -9,13 +9,14 @@
   <link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
   <title>Neusler | Modern Publishing</title>
   <link rel="stylesheet" href="{% static 'css/vars.css' %}">
-  <link rel="stylesheet" href="{% static 'css/plugins.css' %}">
+  <!-- <link rel="stylesheet" href="{% static 'css/plugins.css' %}"> -->
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" href="{% static 'css/colors/green.css' %}">
-  <link rel="preload" href="{% static 'css/fonts/dm.css' %}" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="{% static 'css/fonts/thicccboi.css' %}" as="style" onload="this.rel='stylesheet'">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
   {% block extra_head %}{% endblock %}
+
 </head>
 
 <body>
@@ -38,7 +39,9 @@
 
   <script src="{% static 'js/plugins.js' %}"></script>
   <script src="{% static 'js/theme.js' %}"></script>
+  <script src="{% static 'js/extras.js' %}"></script>
   {% block extra_js %}{% endblock %}
+  <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fb65e547-5f43-4345-b2fe-e48bee5604a0";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </body>
 
 </html>

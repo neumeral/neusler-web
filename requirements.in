@@ -1,2 +1,5 @@
 Django==4.1.0
 django-distill==3.0.1
+black
+isort
+flake8
