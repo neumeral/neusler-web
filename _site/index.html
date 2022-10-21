@@ -9,13 +9,21 @@
   <link rel="shortcut icon" href="/static/images/favicon.png">
   <title>Neusler | Modern Publishing</title>
   <link rel="stylesheet" href="/static/css/vars.css">
-  <link rel="stylesheet" href="/static/css/plugins.css">
+  <!-- <link rel="stylesheet" href="/static/css/plugins.css"> -->
   <link rel="stylesheet" href="/static/css/style.css">
   <link rel="stylesheet" href="/static/css/colors/green.css">
-  <link rel="preload" href="/static/css/fonts/dm.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="/static/css/fonts/thicccboi.css" as="style" onload="this.rel='stylesheet'">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
-  
+   
+<style>
+  .responsive-iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 4px;
+    border: 2px solid #79baaa;
+  }
+</style>
 
 
 </head>
@@ -24,122 +32,499 @@
   <div class="content-wrapper">
     
 
-<header class="wrapper bg-light pt-1">
+<header class="wrapper bg-light shadow-sm">
   <nav class="navbar classic transparent navbar-expand-lg navbar-light">
     <div class="container flex-lg-row flex-nowrap align-items-center">
-      <div class="navbar-brand w-100"><a href="start.html"><img src="/static/images/logo_md.png" height='40' srcset="/static/images/logo_md%402x.png 2x" alt="" /></a></div>
+      <div class="navbar-brand w-100">
+        <a href="/"
+          ><img
+            src="/static/images/logo_md.png"
+            height="32"
+            srcset="/static/images/logo_md%402x.png 2x"
+            alt=""
+        /></a>
+      </div>
+
       <div class="navbar-collapse offcanvas-nav">
         <div class="offcanvas-header d-lg-none d-xl-none">
-          <a href="#"><img src="/static/images/logo_md.png" srcset="/static/images/logo_md%402x.png 2x" alt="" /></a>
-          <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+          <a href="/"
+            ><img
+            src="/static/images/logo_md.png"
+            height="32"
+            srcset="/static/images/logo_md%402x.png 2x"
+            alt=""
+        /></a>
+          <button
+            type="button"
+            class="btn-close btn-close-white offcanvas-close offcanvas-nav-close"
+            aria-label="Close"
+          ></button>
         </div>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Schedule a Demo</a>
-          </li>
-        </ul>
 
-      </div>
-      <!-- /.navbar-collapse -->
-      <div class="navbar-other ms-lg-4">
-        <ul class="navbar-nav flex-row align-items-center ms-auto" data-sm-skip="true">
-          <li class="nav-item"><a class="nav-link" data-toggle="offcanvas-info"><i class="uil uil-info-circle"></i></a></li>
-          <li class="nav-item d-none d-md-block">
-            <a href="https://demo.neusler.com" class="btn btn-sm btn-primary rounded" >Sign In</a>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown" id="products-dropdown-menu">
+            <a
+              class="nav-link has-submenu"
+              href="/product"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Product <span class="sub-arrow"></span
+            ></a>
+            <ul
+              class="dropdown-menu bg-light p-0 shadow-lg"
+              role="group"
+              aria-hidden="true"
+              aria-labelledby="products-dropdown-menu"
+              aria-expanded="false"
+            >
+              
+
+              <li class="nav-item">
+                <a class="dropdown-item px-0" href="/product/publishing">
+                  <div
+                    class="d-flex flex-row bg-light py-2 px-4 "
+                  >
+                    <div>
+                      <div class="icon text-primary fs-28 me-4 mt-n1">
+                        <i class="las la-network-wired"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <h5 class="mb-0">Publishing Workflows</h5>
+                      <p class="text-normal small my-1 pr-2">
+                        Customizable workflows for publishing.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              
+              <li class="nav-item  bg-gray">
+                <a class="dropdown-item px-0" href="/product/engage">
+                  <div class="d-flex flex-row bg-gray py-2 px-4">
+                    <div>
+                      <div class="icon text-primary fs-28 me-4 mt-n1">
+                        <i class="las la-bullhorn"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <h5 class="mb-0">Engage</h5>
+                      <p class="text-normal small my-1 pr-2">
+                        Elements to engage with your users
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+
+              <li class="nav-item">
+                <a class="dropdown-item px-0" href="/product/automate">
+                  <div
+                    class="d-flex flex-row py-2 px-4 border-1"
+                  >
+                    <div>
+                      <div class="icon text-primary fs-28 me-4 mt-n1">
+                        <i class="las la-cogs"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <h5 class="mb-0">Automations</h5>
+                      <p class="text-normal small my-1 pr-2">
+                        Cross post to social channels.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </li>
-          <li class="nav-item ms-lg-0">
-            <div class="navbar-hamburger d-lg-none d-xl-none ms-auto"><button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button></div>
+
+
+          <li class="nav-item dropdown" id="Resources dropdown menu">
+            <a
+              class="nav-link has-submenu"
+              href="#!"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Resources <span class="sub-arrow"></span
+            ></a>
+            <ul
+              class="dropdown-menu bg-light shadow-lg px-0 py-0"
+              role="group"
+              aria-hidden="true"
+              aria-labelledby="sm--3"
+              aria-expanded="false"
+            >
+              <li class="nav-item">
+                <a class="dropdown-item px-0" href="https://medium.com/neusler" target="_blank">
+                  <div
+                    class="d-flex flex-row bg-light py-2 px-4 "
+                  >
+                    <div>
+                      <div class="icon text-primary fs-28 me-4 mt-n1">
+                        <i class="las la-pen-fancy"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <h5 class="mb-0">Blog</h5>
+                      <p class="text-normal small pr-2 my-1">
+                        Get interesting content insights.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="dropdown-item px-0" href="https://contentbites.substack.com" target="_blank">
+                  <div
+                    class="d-flex flex-row bg-light py-2 px-4  bg-gray "
+                  >
+                    <div>
+                      <div class="icon text-primary fs-28 me-4 mt-n1">
+                        <i class="la la-envelope-open"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <h5 class="mb-0">Newsletter</h5>
+                      <p class="text-normal small pr-2 my-1">
+                        Content Bites on Substack.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="dropdown-item px-0" href="/drops">
+                  <div class="d-flex flex-row bg-light py-2 px-4">
+                    <div>
+                      <div class="icon text-primary fs-28 me-4 mt-n1">
+                        <i class="las la-tools"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <h5 class="mb-0">Use our tools</h5>
+                      <p class="text-normal small pr-2 my-1">
+                        Nifty tools for content sites.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link has-submenu"
+              href="/pricing"
+              id="sm--7"
+              aria-haspopup="true"
+              aria-controls="sm--8"
+              aria-expanded="false"
+              >Pricing</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link has-submenu"
+              href="https://github.com/neumeral/neusler-lite/discussions"
+              target="_blank"
+              id="sm--7"
+              aria-haspopup="true"
+              aria-controls="sm--8"
+              aria-expanded="false"
+              >Community</a
+            >
+          </li>
+
+          <!-- <li class="nav-item">
+            <a
+              class="nav-link text-blue"
+              href="https://actionblok.neusler.com"
+              id="sm--7"
+              aria-haspopup="true"
+              aria-controls="sm--8"
+              aria-expanded="false"
+              ><span class="text- my-0">&bullet; </span>Try ActionBloks</a
+            >
+          </li> -->
+
+          <li class="nav-item">
+            <a
+              class="nav-link has-submenu text-primary"
+              href="https://calendly.com/neusler/30min"
+              id="sm--7"
+              target="_blank"
+              aria-haspopup="true"
+              aria-controls="sm--8"
+              aria-expanded="false"
+              >Get Started <i class="la la-arrow-right"></i>
+            </a>
           </li>
         </ul>
         <!-- /.navbar-nav -->
       </div>
+
+      <!-- /.navbar-collapse -->
+
       <!-- /.navbar-other -->
     </div>
     <!-- /.container -->
   </nav>
   <!-- /.navbar -->
-
 </header>
 
     
     
-<section class="wrapper bg-light mt-3">
-  <div class="container">
-    <div class="card bg-soft-primary rounded-4 mt-2 mb-13 mb-md-17">
-      <div class="card-body p-md-10 py-xl-11 px-xl-15">
+
+<section class="wrapper bg-light mt--1">
+  <div class="">
+    <div class="card bg-soft-primary ">
+      <div class="card-body py-md-7 py-xl-10 container">
         <div class="row gx-lg-8 gx-xl-0 gy-10 align-items-center">
-          <div class="col-lg-6 order-lg-2 d-flex position-relative">
-
-            <img class="img-fluid ms-auto mx-auto me-lg-8" src="/static/images/pages/publishing-2.svg" srcset="% static 'images/pages/publishing-2.svg' %} 2x" alt="" data-cue="fadeIn">
-
+          <div class="col-lg-6 order-lg-2 d-flex position-relative justify-content-center">
+            <!-- <img
+              class="img-fluid ms-auto mx-auto me-lg-8"
+              src="/static/images/pages/publishing-2.svg"
+              srcset="% static 'images/pages/publishing-2.svg' %} 2x"
+              alt=""
+              data-cue="fadeIn"
+            /> -->
+            <div class="embed-responsive embed-responsive-4by3">
+              <video class="img-fluid" height="400" autoplay loop muted data-cue="fadeIn">
+                <source src="/static/images/pages/editorial.mp4" type="video/mp4" />
+              </video>
+            </div>
+            
           </div>
           <!--/column -->
-          <div class="col-lg-6 text-center text-lg-start" data-cues="slideInDown" data-group="page-title" data-delay="600">
-            <h1 class="display-2 mb-5">Content publishing that leverages modern technology.</h1>
-            <p class="lead fs-lg lh-sm mb-7 pe-xl-10">Use automation workflows, and artificial intelligence to take your content strategy up a notch.</p>
-            <div class="d-flex justify-content-center justify-content-lg-start" data-cues="slideInDown" data-group="page-title-buttons" data-delay="900">
-              <span><a href="#features" class="btn btn-lg btn-primary rounded me-2">Explore</a></span>
-              <span><a href="#" class="btn btn-lg btn-link text-primary fw-bold rounded">Schedule a demo &raquo;</a></span>
+          <div
+            class="col-lg-6 text-center text-lg-start"
+            data-cues="slideInDown"
+            data-group="page-title"
+            data-delay="600"
+          >
+            <h3 class="display-1 mb-4">
+              Tools for modern publishing &mdash;
+              <!-- <span class="display-4">Bring Your Own Content — </span> -->
+            </h3>
+            <h4 class="mb-8">
+              <span class="typer text-primary text-nowrap h1" data-delay="100" data-delim=":" data-words="improve reader engagement:streamline editorial processes:smart monetization"></span>
+              <span class="cursor text-primary" data-owner="typer" style="transition: all 0.1s ease 0s; opacity: 1;">|</span>
+            </h4>
+            <h1 class="lead fs-lg lh-sm mb-4 pe-xl-10">
+              <span class="text-primary ">Neusler</span> is a <span class="underline-wavy">content publishing platform</span> with workflows, automations, interactive elements, monetization modules and much more.
+            </h1>
+            <p class="fs-md mb-5 mb-md-8">Focus on content, while we handle reader experience and distribution.</p>
+            <div
+              class="d-flex justify-content-center align-items-center justify-content-lg-start"
+              data-cues="slideInDown"
+              data-group="page-title-buttons"
+              data-delay="900"
+            >
+
+            <span><a href="/contact" class="btn btn- btn-primary rounded me-2">Book a demo </a></span>
+            <span><a href="#product" class="px-4 text-primary fw-bold rounded scrollspy">Explore product <i class="la la-arrow-right"></i></a></span>
+
+              
             </div>
-            <div class='my-3'>
-              <p class='muted small'>We are currently in closed beta.</p>
+            <div class="my-0">
+              <!-- <p class="muted small">We are currently in closed beta.</p> -->
             </div>
           </div>
           <!--/column -->
+
         </div>
-        <!--/.row -->
+
+        <div  class="d-flex justify-content-center text-secondary">
+          <div class="down-arrow"></div>
+        </div>
       </div>
       <!--/.card-body -->
     </div>
     <!--/.card -->
+  </div>
+</section>
 
-    <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-18 align-items-center">
-      <div class="col-md-8 col-lg-6 position-relative" id='features'>
-        <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
-        <figure class="rounded"><img src="/static/images/pages/workflow.svg" srcset="/static/images/pages/workflow.svg 2x" alt=""></figure>
-      </div>
-      
-      <div class="col-lg-6">
-        <h2 class="display-4 mb-3">Configurable Workflows and Automations</h2>
-        <p class="lead fs-lg">Design multi-level workflows that fit your organization. Automate social media posts and push notifications.</p>
-        <p class="mb-6">Neusler helps in sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
 
+<section class="wrapper bg-light wrapper-border" id="product">
+  <div class="container py-5 py-md-8 mb-8 mb-md-14">
+    <div class="row text-center justify-content-center">
+    <div class="col-lg-9 mx-auto">
+      <h2 class="fs-15 text-uppercase text-muted mb-3 mt-12">The Platform</h2>
+      <h3 class="display-4 mb-5 mb-md-10 text-center px-xl-10 px-xxl-15">
+        Everything you need to manage and monetize your content.
+      </h3>
+      <p>See how it works &mdash;</p>
+    </div>
+    </div>
+    <div class="row text-center justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 mx-auto">
+        <script src="https://fast.wistia.com/embed/medias/ekn86tickb.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;border: 4px solid #047c60; border-radius: 5px;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_ekn86tickb videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/ekn86tickb/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
 
       </div>
       <!--/column -->
     </div>
     <!--/.row -->
+    <div class="row text-center">
+      <div class="col-lg-9 mx-auto">
+        
+        <div class="row gx-lg-8 gx-xl-12 process-wrapper text-center mt-10 mt-md-16">
+          <div class="col-md-4">
+            <div class="my-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#acdfd8" class="bi bi-send-check-fill" viewBox="0 0 16 16">
+                <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 1.59 2.498C8 14 8 13 8 12.5a4.5 4.5 0 0 1 5.026-4.47L15.964.686Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
+                <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"/>
+              </svg>
+            </div>
+
+            <h4 class="mb-1 text-primary text-uppercase">Publish</h4>
+            <p class="text-">
+              Use our intuitive editing experience to manage multiple content types, in a single repository.
+            </p>
+          </div>
+          <!--/column -->
+          <div class="col-md-4">
+            <div class="my-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#acdfd8" class="bi bi-diagram-3-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5v-1zm-6 8A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5v-1zm6 0A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5v-1zm6 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1z"/>
+              </svg>
+            </div>
+
+            <h4 class="mb-1 text-primary text-uppercase">Engage</h4>
+            <p>
+              Use our interactive blocks to engage with your readers. Choose from web stories, polls, quizzes etc.
+            </p>
+          </div>
+          <!--/column -->
+          <div class="col-md-4">
+            <div class="my-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#acdfd8" class="bi bi-cash-coin" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
+                <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"/>
+                <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"/>
+                <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
+              </svg>
+            </div>
+            <h4 class="mb-1 text-primary text-uppercase">Monetize</h4>
+            <p>
+              Rollout paid subscription plans and premium content. Improve conversion from free to paid readers with campaigns. 
+            </p>
+          </div>
+          <!--/column -->
+        </div>
+        <!--/.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</section>
+
+<section class="wrapper bg-white mt-8">
+  <div class="container">
+    <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-18 align-items-center">
+      <div class="col-md-8 col-lg-6 position-relative" id="features">
+        <div
+          class="shape bg-soft-primary rounded-circle rellax w-20 h-20"
+          data-rellax-speed="1"
+          style="top: -2rem; left: -1.9rem"
+        ></div>
+        <figure class="rounded">
+          <img
+            src="/static/images/pages/workflow.svg"
+            srcset="/static/images/pages/workflow.svg 2x"
+            alt=""
+          />
+        </figure>
+      </div>
+
+
+      <div class="col-lg-6">
+        <div class="mb-4"><span class="display-3 mb-3">Configurable workflows</span> <span class="display-5 text-secondary">to streamline editorial processes</span></div>
+        <p class="lead fs-lg">
+          Design multi-level workflows that fit your organization's processes. 
+        </p>
+        <p class="mb-2">
+          Organize multiple content types under a single site. Configure review and approval workflows as per your organization's needs. 
+          Manage your content lifecycle and your team gets notified in an instant.
+        </p>
+        <p class="mb-6">The editing interface is build on <a href="https://wagtail.org/about-wagtail/">Wagtail CMS</a>.</p>
+      </div>
+      <!--/column -->
+    </div>
+    
     <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-20 align-items-center">
       <div class="col-md-8 col-lg-6 order-lg-2 position-relative">
-        <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; right: -1.9rem;"></div>
-        <figure class="rounded"><img src="/static/images/pages/ai-2.svg" srcset="/static/images/pages/ai-2.svg 2x" alt=""></figure>
-
+        <div
+          class="shape bg-soft-primary rounded-circle rellax w-20 h-20"
+          data-rellax-speed="1"
+          style="top: -2rem; right: -1.9rem"
+        ></div>
+        <figure class="rounded">
+          <img
+            src="/static/images/pages/automations.svg"
+            srcset="/static/images/pages/automations.svg 2x"
+            alt=""
+          />
+        </figure>
       </div>
       <!--/column -->
       <div class="col-lg-6">
-        <h2 class="display-4 mb-3">Use the power of AI</h2>
-        <p class="lead fs-lg">Use the power of <span class="underline">artificial intelligence</span> to power your processes and content distribution.</p>
-        <p class="mb-6">Neusler helps in sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-
+        <div class="mb-4">
+          <span class="display-3 mb-3">Automations</span> 
+          <span class="display-5 text-secondary">to improve your team's productivity</span>
+        </div>
+        <p class="lead fs-lg">
+          Automate content distribution, re-purposing and manage publishing schedules.
+        </p>
+        <p class="mb-6">
+          Configure automations to post to your social channels and send push notifications. 
+          Send campaigns to prospective readers to convert them into subscribers.
+        </p>
       </div>
-
     </div>
-
 
 
     <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-18 align-items-center">
       <div class="col-md-8 col-lg-6 position-relative">
-        <div class="shape bg-soft-primary rounded-circle rellax w-20 h-20" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
-        <figure class="rounded"><img src="/static/images/pages/engage.svg" srcset="/static/images/pages/engage.svg 2x" alt=""></figure>
+        <div
+          class="shape bg-soft-primary rounded-circle rellax w-20 h-20"
+          data-rellax-speed="1"
+          style="top: -2rem; left: -1.9rem"
+        ></div>
+        <figure class="rounded">
+          <img
+            src="/static/images/pages/engage.svg"
+            srcset="/static/images/pages/engage.svg 2x"
+            alt=""
+          />
+        </figure>
       </div>
       <!--/column -->
       <div class="col-lg-6">
-        <h2 class="display-4 mb-3">Engage with your readers</h2>
-        <p class="lead fs-lg">Modern content is not just a broadcast. It is interactive, and pulls the reader in to co-create with you. <span class="underline">Improve engagement</span> with interactive elements, forums and events.</p>
-        <p class="mb-6">Neusler helps in sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-      </div>
+        <div class="mb-4">
+          <span class="display-3 mb-3">Engage with your readers</span> 
+          <span class="display-5 text-secondary"> using interactive blocks</span>
+        </div>
 
+        <p class="lead fs-lg">
+          Modern content is not just a broadcast. It is interactive, and pulls
+          the reader in to participate with you.
+          <span class="underline">Improve engagement</span> with interactive
+          elements &mdash; polls, comments, likes, google stories etc.
+        </p>
+        <p class="mb-6">
+          Interactive elements make your content stick. 
+          Studies show that content marketers see a marked increase in reader engagement by combining interactive content with other content types.
+          Stand out from the crowd, and bring a unique experience to your readers.
+        </p>
+      </div>
     </div>
+
 
 
     <div class="card bg-soft-primary rounded-4">
@@ -147,19 +532,38 @@
         <div class="row gx-lg-8 gx-xl-12 gy-10">
           <div class="col-lg-6">
             <h3 class="display-4 mb-4">Frequently Asked Questions</h3>
-            <p class="lead fs-lg mb-0">If you don't see an answer to your question, you can send us an email to info@neumeral.com.</p>
+            <p class="lead fs-lg mb-0">
+              If you don't see an answer to your question, you can send us an
+              email to <mark><a href='mailto:hello@neusler.com'>hello@neusler.com</a></mark>
+            </p>
           </div>
           <!--/column -->
           <div class="col-lg-6">
             <div class="accordion accordion-wrapper" id="accordionExample">
               <div class="card plain accordion-item">
                 <div class="card-header" id="headingOne">
-                  <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">How do I see if Neusler is a good fit for me?</button>
+                  <button
+                    class="collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    How do I see if Neusler is a good fit for me?
+                  </button>
                 </div>
                 <!--/.card-header -->
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
                   <div class="card-body">
-                    <p>Signup for a demo, and we will get back to you with credentials to login to a demo instance.</p>
+                    <p>
+                      Signup for a demo, and we will get back to you with
+                      credentials to login to a demo instance.
+                    </p>
                   </div>
                   <!--/.card-body -->
                 </div>
@@ -168,12 +572,29 @@
               <!--/.accordion-item -->
               <div class="card plain accordion-item">
                 <div class="card-header" id="headingTwo">
-                  <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Do you a offer a cloud hosted managed version?</button>
+                  <button
+                    class="collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Do you a offer a cloud hosted managed version?
+                  </button>
                 </div>
                 <!--/.card-header -->
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
                   <div class="card-body">
-                    <p>No, currently, we do not offer a hosted solution. We can build and customize Neusler to your needs and deploy it in your infrastructure, with periodic maintenance plans.</p>
+                    <p>
+                      No. Currently, we do not offer a hosted solution. We can
+                      build and customize Neusler to your needs and deploy it in
+                      your infrastructure, with periodic maintenance plans.
+                    </p>
                   </div>
                   <!--/.card-body -->
                 </div>
@@ -182,12 +603,28 @@
               <!--/.accordion-item -->
               <div class="card plain accordion-item">
                 <div class="card-header" id="headingThree">
-                  <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">How much does this cost?</button>
+                  <button
+                    class="collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    How much does this cost?
+                  </button>
                 </div>
                 <!--/.card-header -->
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
                   <div class="card-body">
-                    <p>Currently we don't offer a fully managed, hosted solution. For individual deployments, please get in touch with us to get a quote.</p>
+                    <p>
+                      Refer to our pricing page to choose a plan that is right for you. 
+                      If you are unclear on which plan to choose, please contact us; we are happy to help :D
+                    </p>
                   </div>
                   <!--/.card-body -->
                 </div>
@@ -209,10 +646,32 @@
   <!-- /.container -->
 </section>
 
+<section class="wrapper bg-white">
+  <div class="container pt-12 py-md-18">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-8 col-lg-6 col-xl-5 text-center">
+
+        <h2 class="display-4 mb-3">Join Our "Neusletter"</h2>
+        <p class="lead fs-lg mb-6 ">
+          Join our trusted clients, get tips, tricks and insights to amplify your content.
+        </p>
+        <p>
+          <div class="h4 mb-0"><a href="https://contentbites.substack.com">Content Bites</a></div>
+          <iframe src="https://contentbites.substack.com/embed" width="400px" style="background: white;" frameborder="0" scrolling="no"></iframe>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+</section>
+
+
 
   </div>
   
-<footer class="bg-light">
+<footer class="bg-gray">
   <div class="container pt-14 pt-md-17 pb-7">
     <div class="row gy-6 gy-lg-0">
       <div class="col-lg-6 col-12">
@@ -222,14 +681,14 @@
           </div>
           <h3 class="h4 mb-3">Made by Neumeral</h3>
           <p class="lead mb-5">Neumeral Technologies is a technology product and services company, that believes in the power of data to transform business processes.</p>
-          <a href="https://neumeral.com" class="more hover">Know more</a>
+          <a href="/contact" class="more hover">Contact Us</a>
         </div>
         <!-- /.widget -->
       </div>
       
       <div class="col-md-6 col-12">
         <div class="widget">
-          <h4 class="widget-title mb-4">Get in touch</h4>
+          <h4 class="widget-title mb-4">Get in touch —</h4>
           
 <div class="d-flex flex-row">
   <div>
@@ -245,7 +704,7 @@
     <div class="icon text-primary fs-28 me-4 mt-n1"> <i class="uil uil-phone-volume"></i> </div>
   </div>
   <div>
-    <h5 class="mb-1">Whatsapp</h5>
+    <h5 class="mb-1">Mobile / Whatsapp</h5>
     <p>+91 9742186335</p>
   </div>
 </div>
@@ -255,7 +714,7 @@
   </div>
   <div>
     <h5 class="mb-1">E-mail</h5>
-    <p class="mb-0"><a href="mailto:sandbox@email.com" class="link-body">info@neumeral.com</a></p>
+    <p class="mb-0"><a href="mailto:hello@neusler.com" class="link-body">hello@neusler.com</a></p>
   </div>
 </div>
 
@@ -270,7 +729,8 @@
       <div class="mb-2 mb-lg-0  text-center">
         <div>© 2022 Neumeral Technologies. All rights reserved.</div>
         <p class='small'>
-          <a href="https://storyset.com/technology">Technology illustrations by Storyset</a>
+          <a href="https://storyset.com/team">Illustrations by Storyset</a>
+
         </p>
       </div>
       
@@ -292,7 +752,9 @@
 
   <script src="/static/js/plugins.js"></script>
   <script src="/static/js/theme.js"></script>
+  <script src="/static/js/extras.js"></script>
   
+  <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fb65e547-5f43-4345-b2fe-e48bee5604a0";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </body>
 
 </html>
