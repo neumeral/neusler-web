@@ -24,7 +24,7 @@ urlpatterns = [
         ProductPageView.as_view(),
         name="product_page",
         distill_func=get_static_template,
-        distill_file="products/index.html",
+        distill_file="product/index.html",
     ),
 
     distill_path(
@@ -32,7 +32,7 @@ urlpatterns = [
         ProductPubPageView.as_view(),
         name="product_publishing_page",
         distill_func=get_static_template,
-        distill_file="products/publishing/index.html",
+        distill_file="product/publishing/index.html",
     ),
 
     distill_path(
@@ -40,23 +40,23 @@ urlpatterns = [
         ProductAutomatePageView.as_view(),
         name="product_automate_page",
         distill_func=get_static_template,
-        distill_file="products/automate/index.html",
+        distill_file="product/automate/index.html",
     ),
 
-    distill_path(
-        "product/ai",
-        ProductAIPageView.as_view(),
-        name="product_ai_page",
-        distill_func=get_static_template,
-        distill_file="products/ai/index.html",
-    ),
+    # distill_path(
+    #     "product/ai",
+    #     ProductAIPageView.as_view(),
+    #     name="product_ai_page",
+    #     distill_func=get_static_template,
+    #     distill_file="product/ai/index.html",
+    # ),
 
     distill_path(
         "product/engage",
         ProductEngagePageView.as_view(),
         name="product_engage_page",
         distill_func=get_static_template,
-        distill_file="products/engage/index.html",
+        distill_file="product/engage/index.html",
     ),
 
     distill_path(
