@@ -24,43 +24,47 @@
     
 
 <header class="wrapper bg-light shadow-sm">
-  <nav class="navbar classic transparent navbar-expand-lg navbar-light">
-    <div class="container flex-lg-row flex-nowrap align-items-center">
-      <div class="navbar-brand w-100">
-        <a href="/"
-          ><img
+  <nav class="navbar center-nav pt-0 transparent navbar-expand-lg navbar-light">
+  <div class="container flex-lg-row flex-nowrap align-items-center">
+    <div class="navbar-brand w-100">
+      <a href="/" class="d-flex align-items-center">
+      <div>
+        <img
             src="/static/images/logo_md.png"
             height="32"
-            srcset="/static/images/logo_md%402x.png 2x"
-            alt=""
-        /></a>
+            srcset="/static/images/logo_md.png 2x"
+            alt="neusler logo"
+        />
+      </div>
+      </a>
+    </div>
+    <div class="navbar-collapse offcanvas-nav" style='color: dark; width:100%;'>
+      <div class="offcanvas-header d-lg-none d-xl-none py-6">
+        <a href="/">
+          <div>
+            <img
+              src="/static/images/logo_md.png"
+              height="32"
+              srcset="/static/images/logo_md.png 2x"
+              alt="neusler logo"
+              class='align-middle'
+              height='32px'
+              style='max-height: 45px;'
+            />
+          </div>
+        </a>
+        <button type="button" class="btn-close bg-secondary btn-close-white my-2 p-4 rounded-circle btn-close-dark offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
       </div>
 
-      <div class="navbar-collapse offcanvas-nav">
-        <div class="offcanvas-header d-lg-none d-xl-none">
-          <a href="/"
-            ><img
-            src="/static/images/logo_md.png"
-            height="32"
-            srcset="/static/images/logo_md%402x.png 2x"
-            alt=""
-        /></a>
-          <button
-            type="button"
-            class="btn-close btn-close-white offcanvas-close offcanvas-nav-close"
-            aria-label="Close"
-          ></button>
-        </div>
 
-        <ul class="navbar-nav">
+      <ul class="navbar-nav nav-end">
           <li class="nav-item dropdown" id="products-dropdown-menu">
             <a
               class="nav-link has-submenu"
               href="/product"
               aria-haspopup="true"
               aria-expanded="false"
-              >Product <span class="sub-arrow"></span
-            ></a>
+              >Product <span class="sub-arrow"></span></a>
             <ul
               class="dropdown-menu bg-light p-0 shadow-lg"
               role="group"
@@ -75,14 +79,14 @@
                   <div
                     class="d-flex flex-row bg-light py-2 px-4 "
                   >
-                    <div>
+                    <div class='dropdown-icon'>
                       <div class="icon text-primary fs-28 me-4 mt-n1">
                         <i class="las la-network-wired"></i>
                       </div>
                     </div>
                     <div>
                       <h5 class="mb-0">Publishing Workflows</h5>
-                      <p class="text-normal small my-1 pr-2">
+                      <p class="subheading text-normal small my-1 pr-2">
                         Customizable workflows for publishing.
                       </p>
                     </div>
@@ -94,14 +98,14 @@
               <li class="nav-item  bg-gray">
                 <a class="dropdown-item px-0" href="/product/engage">
                   <div class="d-flex flex-row bg-gray py-2 px-4">
-                    <div>
+                    <div class='dropdown-icon'>
                       <div class="icon text-primary fs-28 me-4 mt-n1">
                         <i class="las la-bullhorn"></i>
                       </div>
                     </div>
                     <div>
                       <h5 class="mb-0">Engage</h5>
-                      <p class="text-normal small my-1 pr-2">
+                      <p class="subheading text-normal small my-1 pr-2">
                         Elements to engage with your users
                       </p>
                     </div>
@@ -115,14 +119,14 @@
                   <div
                     class="d-flex flex-row py-2 px-4 border-1"
                   >
-                    <div>
+                    <div class='dropdown-icon'>
                       <div class="icon text-primary fs-28 me-4 mt-n1">
                         <i class="las la-cogs"></i>
                       </div>
                     </div>
                     <div>
                       <h5 class="mb-0">Automations</h5>
-                      <p class="text-normal small my-1 pr-2">
+                      <p class="subheading text-normal small my-1 pr-2">
                         Cross post to social channels.
                       </p>
                     </div>
@@ -136,7 +140,7 @@
           <li class="nav-item dropdown" id="Resources dropdown menu">
             <a
               class="nav-link has-submenu"
-              href="#!"
+              href="#"
               aria-haspopup="true"
               aria-expanded="false"
               >Resources <span class="sub-arrow"></span
@@ -144,6 +148,7 @@
             <ul
               class="dropdown-menu bg-light shadow-lg px-0 py-0"
               role="group"
+              style='98%'
               aria-hidden="true"
               aria-labelledby="sm--3"
               aria-expanded="false"
@@ -153,14 +158,14 @@
                   <div
                     class="d-flex flex-row bg-light py-2 px-4 "
                   >
-                    <div>
+                    <div class='dropdown-icon'>
                       <div class="icon text-primary fs-28 me-4 mt-n1">
                         <i class="las la-pen-fancy"></i>
                       </div>
                     </div>
                     <div>
                       <h5 class="mb-0">Blog</h5>
-                      <p class="text-normal small pr-2 my-1">
+                      <p class="subheading text-normal small pr-2 my-1">
                         Get interesting content insights.
                       </p>
                     </div>
@@ -169,34 +174,33 @@
               </li>
               <li class="nav-item">
                 <a class="dropdown-item px-0" href="https://contentbites.substack.com" target="_blank">
-                  <div
-                    class="d-flex flex-row bg-light py-2 px-4  bg-gray "
-                  >
-                    <div>
+                  <div class="d-flex flex-row bg-gray py-2 px-4">
+                    <div class='dropdown-icon'>
                       <div class="icon text-primary fs-28 me-4 mt-n1">
-                        <i class="la la-envelope-open"></i>
+                        <i class="las la-envelope-open"></i>
                       </div>
                     </div>
                     <div>
                       <h5 class="mb-0">Newsletter</h5>
-                      <p class="text-normal small pr-2 my-1">
+                      <p class="subheading text-normal small my-1 pr-2">
                         Content Bites on Substack.
                       </p>
                     </div>
                   </div>
+
                 </a>
               </li>
               <li class="nav-item">
                 <a class="dropdown-item px-0" href="/drops">
                   <div class="d-flex flex-row bg-light py-2 px-4">
-                    <div>
+                    <div class='dropdown-icon'>
                       <div class="icon text-primary fs-28 me-4 mt-n1">
                         <i class="las la-tools"></i>
                       </div>
                     </div>
                     <div>
                       <h5 class="mb-0">Use our tools</h5>
-                      <p class="text-normal small pr-2 my-1">
+                      <p class="subheading text-normal small pr-2 my-1">
                         Nifty tools for content sites.
                       </p>
                     </div>
@@ -242,9 +246,9 @@
             >
           </li> -->
 
-          <li class="nav-item">
+          <li class="nav-item d-lg-none ">
             <a
-              class="nav-link has-submenu text-primary"
+              class="nav-link has-submenu text-primary "
               href="https://calendly.com/neusler/30min"
               id="sm--7"
               target="_blank"
@@ -255,16 +259,39 @@
             </a>
           </li>
         </ul>
-        <!-- /.navbar-nav -->
-      </div>
 
-      <!-- /.navbar-collapse -->
-
-      <!-- /.navbar-other -->
     </div>
-    <!-- /.container -->
-  </nav>
-  <!-- /.navbar -->
+    <!-- /.navbar-collapse -->
+    <div class="navbar-other w-100 d-flex ms-auto">
+      <ul class="navbar-nav flex-row align-items-center ms-auto" data-sm-skip="true">
+        <li class="nav-item d-none d-sm-block ">
+            <a
+              class="more hover nav-link has-submenu text-primary"
+              href="https://calendly.com/neusler/30min"
+              id="sm--7"
+              target="_blank"
+              aria-haspopup="true"
+              aria-controls="sm--8"
+              aria-expanded="false"
+              >Get Started</i>
+            </a>
+          </li>
+
+        <li class="nav-item d-lg-none">
+          <div class="navbar-hamburger">
+            <button class="hamburger animate plain" data-toggle="offcanvas-nav">
+              <span></span>
+            </button>
+          </div>
+        </li>
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+  </div>
+  <!-- /.container -->
+</nav>
+  
 </header>
 
     
@@ -301,10 +328,10 @@
               <!--/column -->
               <div class="col-lg-6">
                 <div class="p-10 p-md-11 p-lg-13">
-                  <h2 class="display-4 mb-3">Let’s talk, book a demo</h2>
+                  <h2 class="display-4 mb-3">Let’s talk, book a demo &mdash;</h2>
                   <p class="lead fs-lg">Here's to your next great content site!</p>
   
-                  <p>Schedule a call to discuss your requirements. Let us discuss how <span class='underline'>Neusler</span> can improve content monetization and make your content marketing efficient &mdash;</p>
+                  <p>Schedule a call to discuss your requirements. Let us discuss how <span class='underline'>Neusler</span> can improve content monetization and make your content marketing efficient.</p>
   
                   <a href="https://calendly.com/neusler/30min" class="btn btn-primary mt-2" target="_blank">Schedule a call</a>
                 </div>
