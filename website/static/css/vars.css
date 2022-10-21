@@ -46,3 +46,45 @@
 .underline-wavy {
   text-decoration: underline wavy #e6c05f;
 }
+
+.offcanvas-nav {
+  background: #EEEEEE;
+}
+
+@media (min-width: 992px) { 
+  .offcanvas-nav {
+    background: #FFF;
+  }
+}
+.navbar-nav.sm-collapsible .nav-link .sub-arrow {
+  display: none;
+
+}
+
+.navbar-nav.sm-collapsible .nav-link.has-submenu {
+  color:  #333;
+}
+.navbar .navbar-collapse .nav-link:hover {
+  color:  #000;
+}
+
+.navbar-nav.sm-collapsible .nav-link.has-submenu:hover {
+  color:  #000;
+}
+
+.navbar-nav.sm-collapsible .nav-item .dropdown-menu{
+  display: block;
+  width: 80%;
+  max-width: 15rem;
+  margin-bottom: 1rem;
+}
+
+.navbar-nav.sm-collapsible .nav-item .dropdown-menu .dropdown-icon,
+.navbar-nav.sm-collapsible .nav-item .dropdown-menu .subheading{
+  display: none;
+}
+
+
+.navbar-nav.sm-collapsible .nav-item .dropdown-menu .dropdown-item{
+  color: #333;
+}
