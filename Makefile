@@ -7,7 +7,10 @@ green := $(shell tput setaf 2)
 
 prep:
 	pip install --upgrade pip wheel setuptools pip-tools
-	npm i minify -g
+	npm i minify purgecss -g
+
+generate-site:
+	. ./gen.sh
 
 bundle-css:
 	minify website/static/css/vars.css > website/static/css/vars.min.css
@@ -27,3 +30,5 @@ purge-css:
 		-o _site/static/cssmin
 	cat _site/static/cssmin/vars.css  _site/static/cssmin/style.css _site/static/cssmin/green.css  > _site/static/cssmin/bundle.css
 	cp  _site/static/cssmin/bundle.css _site/static/css/bundle.css
+
+release: bundle-js generate-site purge-css
