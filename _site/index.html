@@ -28,7 +28,7 @@
   <div class="content-wrapper">
     
 
-<header class="wrapper bg-light shadow-sm">
+<header class="wrapper bg-white shadow-sm">
   <nav class="navbar center-nav pt-0 transparent navbar-expand-lg navbar-light">
   <div class="container flex-lg-row flex-nowrap align-items-center">
     <div class="navbar-brand w-100">
@@ -43,7 +43,7 @@
       </div>
       </a>
     </div>
-    <div class="navbar-collapse offcanvas-nav" style='color: dark; width:100%;'>
+    <div class="navbar-collapse offcanvas-nav customnav" style='color: dark; width:100%;'>
       <div class="offcanvas-header d-lg-none d-xl-none py-6">
         <a href="/">
           <div>
@@ -58,7 +58,7 @@
             />
           </div>
         </a>
-        <button type="button" class="btn-close bg-secondary btn-close-white my-2 p-4 rounded-circle btn-close-dark offcanvas-close offcanvas-nav-close" aria-label="Close"></button>
+        <button type="button" class="btn-close bg-secondary btn-close-white my-2 p-4 rounded-circle-alt btn-close-dark offcanvas-close offcanvas-nav-close" aria-label="Close sidebar"></button>
       </div>
 
 
@@ -73,6 +73,7 @@
             <ul
               class="dropdown-menu bg-light p-0 shadow-lg"
               role="group"
+              style='width: 98%'
               aria-hidden="true"
               aria-labelledby="products-dropdown-menu"
               aria-expanded="false"
@@ -268,7 +269,7 @@
     </div>
     <!-- /.navbar-collapse -->
     <div class="navbar-other w-100 d-flex ms-auto">
-      <ul class="navbar-nav flex-row align-items-center ms-auto" data-sm-skip="true">
+      <ul class="navbar-nav flex-row align-items-center ms-auto px-3" data-sm-skip="true">
         <li class="nav-item d-none d-sm-block ">
             <a
               class="more hover nav-link has-submenu text-primary"
@@ -284,7 +285,7 @@
 
         <li class="nav-item d-lg-none">
           <div class="navbar-hamburger">
-            <button class="hamburger animate plain" data-toggle="offcanvas-nav">
+            <button class="hamburger animate plain" aria-label="Menu" data-toggle="offcanvas-nav">
               <span></span>
             </button>
           </div>
@@ -476,7 +477,7 @@
           Manage your content lifecycle and your team gets notified in an instant.
         </p>
         <p class="mb-2">The editing interface is build on <a href="https://wagtail.org/about-wagtail/">Wagtail CMS</a>.</p>
-        <p class='mt-6 mb-6'><a href="/product/publishing" class="more hover link-primary">Learn more</a></p>
+        <p class='mt-6 mb-6'><a href="/product/publishing" class="more hover link-primary">Publishing Features</a></p>
       </div>
       <!--/column -->
     </div>
@@ -509,7 +510,7 @@
           Configure automations to post to your social channels and send push notifications. 
           Send campaigns to prospective readers to convert them into subscribers.
         </p>
-        <p class='mt-6 mb-6'><a href="/product/automate" class="more hover link-primary">Learn more</a></p>
+        <p class='mt-6 mb-6'><a href="/product/automate" class="more hover link-primary">Automation Features</a></p>
       </div>
     </div>
 
@@ -547,7 +548,7 @@
           Studies show that content marketers see a marked increase in reader engagement by combining interactive content with other content types.
           Stand out from the crowd, and bring a unique experience to your readers.
         </p>
-        <p class='mt-6 mb-6'><a href="/product/engage" class="more hover link-primary">Learn more</a></p>
+        <p class='mt-6 mb-6'><a href="/product/engage" class="more hover link-primary">Reader Engagement Features</a></p>
       </div>
     </div>
 
@@ -570,6 +571,7 @@
                     class="collapsed"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseOne"
+                    aria-label="How do I see if Neusler is a good fit for me?"
                     aria-expanded="true"
                     aria-controls="collapseOne"
                   >
@@ -600,6 +602,7 @@
                     class="collapsed"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseTwo"
+                    aria-label="Do you a offer a cloud hosted managed version?"
                     aria-expanded="false"
                     aria-controls="collapseTwo"
                   >
@@ -632,6 +635,7 @@
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseThree"
                     aria-expanded="false"
+                    aria-label="How much does this cost?"
                     aria-controls="collapseThree"
                   >
                     How much does this cost?
