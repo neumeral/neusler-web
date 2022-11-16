@@ -7,13 +7,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
-  <title>Neusler | Modern Publishing</title>
+  <title>{% if seo_title %}{{ seo_title }}{% else %}{{ default_title }}{% endif %}</title>
   <link rel="stylesheet" href="{% static 'css/bundle.css' %}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/dist/line-awesome/css/line-awesome.min.css">
+
+  {% block meta_tags %}
+  <meta name="title" content="{% if seo_title %}{{ seo_title }}{% else %}{{ default_title }}{% endif %}">
+  <meta name="description" content="{% if seo_desc %}{{ seo_desc }}{% else %}{{ default_desc }}{% endif %}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.neusler.com{{request.get_full_path}}">
+  <meta property="og:title" content="{% if seo_title %}{{ seo_title }}{% else %}{{ default_title }}{% endif %}">
+  <meta property="og:description" content="{% if seo_desc %}{{ seo_desc }}{% else %}{{ default_desc }}{% endif %}">
+  <meta property="og:image" content="https://www.neusler.com{% if seo_image %}{% static seo_image %}{% else %}{% static 'images/neusler-content-pub_md.jpg' %}{% endif %}">
+
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.neusler.com{{request.get_full_path}}">
+  <meta property="twitter:title" content="{% if seo_title %}{{ seo_title }}{% else %}{{ default_title }}{% endif %}">
+  <meta property="twitter:description" content="{% if seo_desc %}{{ seo_desc }}{% else %}{{ default_desc }}{% endif %}">
+  <meta property="twitter:image" content="https://www.neusler.com{% if seo_image %}{% static seo_image %}{% else %}{% static 'images/neusler-content-pub_md.jpg' %}{% endif %}">
+  {% endblock %}
 
   {% block extra_head %}{% endblock %}
 
 </head>
+
 
 <body>
   <div class="content-wrapper">
