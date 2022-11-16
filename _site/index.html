@@ -8,11 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="/static/images/favicon.png">
   <title>Neusler | Modern Publishing</title>
-  <link rel="stylesheet" href="./static/css/vars.css">
-  <!-- <link rel="stylesheet" href="/static/css/plugins.css"> -->
-  <link rel="stylesheet" href="./static/css/style.css">
-  <link rel="stylesheet" href="./static/css/colors/green.css">
-  <link rel="preload" href="./static/css/fonts/thicccboi.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="stylesheet" href="/static/css/bundle.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
    
@@ -389,7 +385,7 @@
     </div>
     <div class="row text-center justify-content-center">
       <div class="col-12 col-md-10 col-lg-8 mx-auto">
-        <script src="https://fast.wistia.com/embed/medias/ekn86tickb.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;border: 4px solid #047c60; border-radius: 5px;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_ekn86tickb videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/ekn86tickb/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+        <script src="https://fast.wistia.com/embed/medias/ekn86tickb.jsonp" async></script><script async src="https://fast.wistia.com/assets/external/E-v1.js" ></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;border: 4px solid #047c60; border-radius: 5px;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_ekn86tickb videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/ekn86tickb/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
 
       </div>
       <!--/column -->
@@ -555,9 +551,7 @@
       </div>
     </div>
 
-
-
-    <div class="card bg-soft-primary rounded-4">
+    <div class="card bg-light border rounded-4 mb-10">
       <div class="card-body p-md-10 p-xl-11">
         <div class="row gx-lg-8 gx-xl-12 gy-10">
           <div class="col-lg-6">
@@ -675,27 +669,26 @@
   </div>
   <!-- /.container -->
 </section>
-
+<!-- 
 <section class="wrapper bg-white">
   <div class="container pt-12 py-md-18">
     <div class="row justify-content-center align-items-center">
       <div class="col-md-8 col-lg-6 col-xl-5 text-center">
 
-        <h2 class="display-4 mb-3">Read our "neusletter"</h2>
+        <h2 class="display-4 mb-3">Get the latest in the world of Content Marketing</h2>
         <p class="lead fs-lg mb-6 ">
           Join our trusted clients, get tips, tricks and insights to amplify your content.
         </p>
         <p>
           <div class="h4 mb-0"><a href="https://contentbites.substack.com">Content Bites</a></div>
-          <iframe src="https://contentbites.substack.com/embed" width="98%" style="background: white;" frameborder="0" scrolling="no"></iframe>
+          <div id="content-bites-load"><iframe src="https://contentbites.substack.com/embed" width="98%" style="background: white;" frameborder="0" scrolling="no"></iframe></div>
         </p>
       </div>
 
     </div>
 
   </div>
-  <!-- /.container -->
-</section>
+</section> -->
 
 
 
@@ -777,14 +770,14 @@
     </svg>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
 
-  <script src="./static/js/plugins.js"></script>
-  <script src="./static/js/theme.js"></script>
-  <script src="./static/js/extras.js"></script>
+  <!-- <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script> -->
+
+  <script defer src="/static/js/bundle.js"></script>
   
-  <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fb65e547-5f43-4345-b2fe-e48bee5604a0";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+  <script defer type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fb65e547-5f43-4345-b2fe-e48bee5604a0";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </body>
 
 </html>

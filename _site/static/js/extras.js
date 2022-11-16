@@ -1,7 +1,10 @@
 
 $(document).ready(function(){
   // Add scrollspy to <body>
-  $('body').scrollspy({target: ".navbar", offset: 50});   
+  // $('body').scrollspy({target: ".navbar", offset: 50});   
+  var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '#navbar-example'
+  })
 
   // Add smooth scrolling on all links inside the navbar
   $("a.scrollspy").on('click', function(event) {
