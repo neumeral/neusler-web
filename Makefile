@@ -16,3 +16,14 @@ bundle-css:
 bundle-js:
 	minify website/static/js/extras.js > website/static/js/extras.min.js 
 	cat website/static/js/plugins.js website/static/js/theme.js website/static/js/extras.min.js > website/static/js/bundle.js 
+
+purge-css:
+	mkdir -p _site/static/cssmin
+	purgecss -css _site/static/css/vars.css _site/static/css/style.css _site/static/css/colors/green.css \
+		-con _site/index.html _site/product/index.html _site/product/automate/index.html \
+		_site/product/engage/index.html _site/product/publishing/index.html \
+		_site/pricing/index.html _site/contact/index.html _site/drops/index.html \
+		_site/static/js/bundle.js _site/static/js/bootstrap.bundle.min.js \
+		-o _site/static/cssmin
+	cat _site/static/cssmin/vars.css  _site/static/cssmin/style.css _site/static/cssmin/green.css  > _site/static/cssmin/bundle.css
+	cp  _site/static/cssmin/bundle.css _site/static/css/bundle.css
