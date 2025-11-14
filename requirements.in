@@ -1,4 +1,4 @@
-Django==5.2.7
+Django==5.2.8
 django-distill==3.2.7
 black
 isort
