@@ -9,7 +9,7 @@
     ],
     "[python]": {
         "editor.codeActionsOnSave": {
-            "source.organizeImports": true
+            "source.organizeImports": "explicit"
         }
     },
     "python.sortImports.args": [
@@ -27,5 +27,10 @@
     "html.format.wrapAttributes": "aligned-multiple",
     "html.format.indentHandlebars": true,
     "html.format.preserveNewLines": false,
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#143411",
+        "titleBar.activeBackground": "#1C4918",
+        "titleBar.activeForeground": "#F8FCF7"
+    }
 }
